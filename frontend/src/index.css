@@ -1,0 +1,216 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(100% - 32px, 960px);
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: #4f46e5;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.page-header h1 {
+  margin: 10px 0;
+  color: #111827;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.045em;
+}
+
+.page-description {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.search-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  background: #fff;
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px #6366f126;
+}
+
+.search-form button,
+.error-state button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: #4f46e5;
+  font-weight: 650;
+}
+
+.search-form button:hover,
+.error-state button:hover {
+  background: #4338ca;
+}
+
+.results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.results-heading h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.result-count {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.employee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  gap: 16px;
+}
+
+.employee-card {
+  display: flex;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 16px #0f172a08;
+}
+
+.employee-avatar {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 14px;
+  color: #4338ca;
+  background: #eef2ff;
+  font-weight: 750;
+}
+
+.employee-details {
+  min-width: 0;
+}
+
+.employee-details h2 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.employee-details p {
+  overflow-wrap: anywhere;
+  margin: 6px 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.employee-details .employee-designation {
+  color: #334155;
+  font-weight: 600;
+}
+
+.employee-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.employee-meta span {
+  padding: 5px 9px;
+  border-radius: 8px;
+  color: #475569;
+  background: #f1f5f9;
+  font-size: 0.75rem;
+}
+
+.status-message,
+.empty-state,
+.error-state {
+  padding: 28px;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.empty-state {
+  text-align: center;
+}
+
+.empty-state p,
+.status-message {
+  color: #64748b;
+}
+
+.error-state {
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    padding: 36px 0;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form button {
+    min-height: 46px;
+  }
+
+  .employee-card {
+    padding: 16px;
+  }
+}
